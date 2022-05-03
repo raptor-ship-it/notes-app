@@ -3,6 +3,7 @@ package org.raptor.notes.domain.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/*** -- collection same as table in a RDMS -- */
 @Document(collection = "notes")
 public class Note {
     /** --- member variables --- */
@@ -10,8 +11,9 @@ public class Note {
     private String id;
     private String description;
 
-    public Note() {
+    public Note(final String description ) {
         super();
+        this.description = description;
     }
 
     public String getId() {
